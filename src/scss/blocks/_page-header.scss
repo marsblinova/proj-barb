@@ -1,0 +1,22 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__logo {
+  height: 85px;
+  text-align: center;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .page-header__logo {
+    order: 2;
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .page-header__logo {
+    height: 640px;
+  }
+}
