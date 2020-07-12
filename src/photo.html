@@ -4,25 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Наши работы</title>
+  <link rel="stylesheet" href="css/styles.min.css">
 </head>
 <body>
   <header class="page-header">
-    <a href="index.html" class="page-header__logo">
-      <img src="img/logotype-mobile.svg" width="226" height="30" alt="Барбершоп  «Бородинский»" class="page-header__logo-image">
+    <a href="#!" class="page-header__logo">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+        <img src="img/logotype-mobile.svg" width="226" height="30" alt="Барбершоп  «Бородинский»" class="page-header__logo-image">
+      </picture>
     </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active"><a href="index.html">Главная</a></li>
-          <li class="site-list__item "><a>Наши работы</a></li>
+          <li class="site-list__item"><a>Главная</a></li>
+          <li class="site-list__item site-list__item--active"><a href="photo.html">Наши работы</a></li>
           <li class="site-list__item"><a href="form.html">Записаться</a></li>
           <li class="site-list__item"><a href="#">Контакты</a></li>
           <li class="site-list__item"><a href="#">HTML Academy</a></li>
         </ul>
         <ul class="main-nav__list user-list">
           <li class="user-list__item">
-            <a class="user-list__login" href="login.html">Войти</a></li>
+            <a class="user-list__login" href="login.html">
+              <svg class="user-list__login-icon" version="1.1" width="16" height="16"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+              <polygon class="st0" points="0,7 7,7 7,4.1 11,8 7,11.9 7,9.1 0,9 "/>
+              <polygon class="st0" points="7,0 7,2 14,2 14,14 7,14 7,16 16,16 16,0 "/></svg>Войти</a></li>
         </ul>
       </div>
     </nav>
@@ -34,7 +42,7 @@
       <a class="button page-title__button" href="index.html">На главную</a>
     </header>
 
-    <section class="works">
+    <section class="works main-wrapper">
       <h2 class="visually-hidden">Примеры работ с отзывами</h2>
       <article class="works-item works-item--work-of-month">
         <p class="works-item__image-wrapper">
@@ -180,5 +188,6 @@
     </div>
   </footer>
 
+  <script src="js/main.js"></script>
 </body>
 </html>
