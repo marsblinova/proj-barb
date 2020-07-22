@@ -1,0 +1,52 @@
+.page-title {
+  margin: 0 auto;
+  padding: 30px 0;
+
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.page-title__button {
+  display: none;
+}
+
+.page-title__title {
+  margin: 0;
+
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media screen and  (min-width: $tablet-width) {
+  .page-title {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 58px 64px 40px 64px;
+  }
+
+  .page-title__button {
+    align-self: center;
+
+    display: block;
+    width: 100px;
+    margin-top: -5px;
+  }
+
+  .page-title__title {
+    font-size: 40px;
+    line-height: 40px;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .page-title {
+    width: 960px;
+    padding-bottom: 80px;
+    padding-top: 60px;
+  }
+}
+

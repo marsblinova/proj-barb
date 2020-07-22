@@ -1,0 +1,24 @@
+.slider__toggles {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.slider__toggle {
+  padding: 0;
+
+  width: 10px;
+  height: 10px;
+
+  cursor: pointer;
+  border: 1px solid #858483;
+  background-color: transparent;
+
+  transform: rotate(45deg);
+}
+
+

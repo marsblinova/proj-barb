@@ -8,11 +8,15 @@
 </head>
 <body>
   <header class="page-header">
-    <a href="#" class="page-header__logo">
-      <img src="img/logotype-mobile.svg" width="226" height="30" alt="Барбершоп  «Бородинский»" class="page-header__logo-image">
+    <a href="#!" class="page-header__logo">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+        <img src="img/logotype-mobile.svg" width="226" height="30" alt="Барбершоп  «Бородинский»" class="page-header__logo-image">
+      </picture>
     </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active"><a>Главная</a></li>
@@ -23,7 +27,10 @@
         </ul>
         <ul class="main-nav__list user-list">
           <li class="user-list__item">
-            <a class="user-list__login" href="login.html">Войти</a></li>
+            <a class="user-list__login" href="login.html">
+              <svg class="user-list__login-icon" version="1.1" width="16" height="16"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+              <polygon class="st0" points="0,7 7,7 7,4.1 11,8 7,11.9 7,9.1 0,9 "/>
+              <polygon class="st0" points="7,0 7,2 14,2 14,14 7,14 7,16 16,16 16,0 "/></svg>Войти</a></li>
         </ul>
       </div>
     </nav>
@@ -46,19 +53,19 @@
           <td class="stats__value">
             1 500<sup>*</sup>
           </td>
-          <td class="stats__field">рублей<br>вложений</td>
+          <td class="stats__field">рублей<br> вложений</td>
         </tr>
         <tr>
           <td class="stats__value">
             7 200
           </td>
-          <td class="stats__field">секунд<br>времени мастера</td>
+          <td class="stats__field">секунд<br> времени мастера</td>
         </tr>
         <tr>
           <td class="stats__value">
             90 000
           </td>
-          <td class="stats__field">постриженных<br>волос</td>
+          <td class="stats__field">постриженных<br> волос</td>
         </tr>
         <tr>
           <td class="stats__value">
@@ -66,8 +73,9 @@
           </td>
           <td class="stats__field">лайков и <br>комплиментов</td>
         </tr>
+
       </table>
-      <small class="stats__legend stats__legend--top">
+      <small class="stats__legend stats__legend--bottom">
         <sup>*</sup> - приведенные данные ложь
       </small>
     </section>
@@ -90,9 +98,9 @@
           </li>
         </ul>
         <p class="advantages__toggles slider__toggles">
-          <button class="slider__toggle" type="button">1</button>
-          <button class="slider__toggle" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
+          <button class="slider__toggle" type="button"><span class="visually-hidden">Первый слайд</span></button>
+          <button class="slider__toggle" type="button"><span class="visually-hidden">Второй слайд</span></button></button>
+          <button class="slider__toggle" type="button"><span class="visually-hidden">Третий слайд</span></button>
         </p>
       </div>
     </section>
@@ -131,7 +139,11 @@
         <div class="reviews__list slider__list">
           <blockquote class="reviews__item slider__item">
             <p class="reviews__author-picture">
-              <img src="img/picture-travis.jpg" width="50" height="33" alt="Фото Трэвиса Баркера" class="reviews__author-image">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/review-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/review-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                <img class="works-item__image" src="img/review-1-mobile.jpg" srcset="img/review-1-mobile@2x.jpg 2x" alt="Фото Трэвиса Баркера" class="reviews__author-image">
+              </picture>
             </p>
             <cite class="reviews__author-name">Трэвис Баркер</cite>
             <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
@@ -160,37 +172,41 @@
         </p>
       </div>
     </section>
-
-    <footer class="page-footer">
-      <div class="page-footer__wrapper">
-        <div class="page-footer__contacts contacts">
-          <b class="contacts__title">Барбершоп «Бородинский»</b>
-          <p class="contacts__text">
-            г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
-            <a href="tel:+7777777777" class="contacts__phone">
-              <span class="contacts__phone-mobile">Тел.:</span>+7777777777
-            </a>
-          </p>
-        </div>
-        <div class="page-footer__social social">
-          <b class="social__title">Давайте дружить!</b>
-          <ul class="social__list">
-            <li class="social__item">
-              <a href="https://vk.com" class="social__link social__link--vkontakte">Мы в Вконтакте</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com">Мы в Фейсбуке</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com">Мы в Инстаграме</a>
-            </li>
-          </ul>
-        </div>
-        <div class="page-footer__copyright copyright">
-          <b class="copyright__text">Разработано:</b>
-          <a href="https://htmlacademy.ru" class="button copyright__link">HTML Academy</a>
-        </div>
-      </div>
-    </footer>
-
   </main>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <div class="page-footer__contacts contacts">
+        <b class="contacts__title">Барбершоп «Бородинский»</b>
+        <p class="contacts__text">
+          г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
+          <a href="tel:+7777777777" class="contacts__phone">
+            <span class="contacts__phone-mobile">Тел.:</span>+7777777777
+          </a>
+        </p>
+      </div>
+      <div class="page-footer__social social">
+        <b class="social__title">Давайте дружить!</b>
+        <ul class="social__list">
+          <li class="social__item">
+            <a href="https://vk.com" class="social__link social__link--vkontakte">Мы в Вконтакте</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com">Мы в Фейсбуке</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="https://www.instagram.com">Мы в Инстаграме</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <b class="copyright__text">Разработано:</b>
+        <a href="https://htmlacademy.ru" class="button copyright__link">HTML Academy</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
