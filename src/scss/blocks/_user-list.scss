@@ -20,9 +20,11 @@
 
   opacity: 0.3;
 
-  polygon {
-    fill: #ffffff;
-  }
+  //polygon {
+   // fill: #ffffff;
+  //}
+
+  fill: #ffffff;
 }
 
 @media screen and (min-width: $tablet-width) {
@@ -40,17 +42,21 @@
     &:hover .user-list__login-icon {
       opacity: 1;
 
-      polygon {
-        fill: #826550;
-      }
+      // polygon {
+      //   fill: #826550;
+      // }
+
+      fill: #826550;
     }
 
     &:active .user-list__login-icon {
       opacity: 0.3;
 
-      polygon {
-        fill: #ffffff;
-      }
+      // polygon {
+      //   fill: #ffffff;
+      // }
+
+      fill: #ffffff;
     }
   }
 
@@ -67,7 +73,7 @@
   }
 
   .user-list__login {
-    position: relative; 
+    position: relative;
 
     width: auto;
     height: auto;
@@ -84,9 +90,10 @@
 
       background-color: #ffffff;
 
-      polygon {
+       polygon {
         fill: #826550;
-      }
+       }
+
     }
 
     &:active {
@@ -98,9 +105,11 @@
     &:hover .user-list__login-icon {
       opacity: 0.3;
 
-      polygon {
-        fill: #000000;
-      }
+      // polygon {
+      //   fill: #000000;
+      // }
+
+      fill: #000000;
     }
 
     &:active .user-list__login-icon {
