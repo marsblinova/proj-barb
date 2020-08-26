@@ -1,0 +1,32 @@
+
+.copyright__text {
+  font-weight: normal;
+}
+
+.copyright__link {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #ffffff;
+  border: 1px solid #3f3f3f;
+
+  &:hover,
+  &:focus {
+    border: 1px solid #545454;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #252525;
+    border-color: #252525;
+  }
+}
+
+@media screen and (min-width: $tablet-width) {
+  .copyright__link {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+

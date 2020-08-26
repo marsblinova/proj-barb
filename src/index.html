@@ -4,9 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Барбершоп «Бородинский»</title>
+  <link rel="preload" href="fonts/pt-sans-narrow-v11-latin_cyrillic-regular.woff2" as="font">
+  <link rel="preload" href="fonts/pt-sans-narrow-v11-latin_cyrillic-700.woff2" as="font">
   <link rel="stylesheet" href="css/styles.min.css">
 </head>
 <body>
+
+  <!-- <svg style="display:none">
+    <symbol viewBox="0 0 16 16" id="icon-login">
+      <polygon class="st0" points="0,7 7,7 7,4.1 11,8 7,11.9 7,9.1 0,9 "/>
+      <polygon class="st0" points="7,0 7,2 14,2 14,14 7,14 7,16 16,16 16,0 "/>
+    </symbol>
+  </svg> -->
+
+  <div style="display: none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+
   <header class="page-header">
     <a href="#!" class="page-header__logo">
       <picture>
@@ -27,10 +41,17 @@
         </ul>
         <ul class="main-nav__list user-list">
           <li class="user-list__item">
-            <a class="user-list__login" href="login.html">
-              <svg class="user-list__login-icon" version="1.1" width="16" height="16"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+            <a class="user-list__login" href="login.html" aria-label="Переход в форму входа на сайт">
+              <!--<svg class="user-list__login-icon" version="1.1" width="16" height="16"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
               <polygon class="st0" points="0,7 7,7 7,4.1 11,8 7,11.9 7,9.1 0,9 "/>
-              <polygon class="st0" points="7,0 7,2 14,2 14,14 7,14 7,16 16,16 16,0 "/></svg>Войти</a></li>
+              <polygon class="st0" points="7,0 7,2 14,2 14,14 7,14 7,16 16,16 16,0 "/></svg>-->
+              <!-- <svg role="img" class="user-list__login-icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#icon-login"></use>
+              </svg> -->
+              <svg role="img" class="user-list__login-icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#login"></use>
+              </svg>
+              Войти</a></li>
         </ul>
       </div>
     </nav>
@@ -140,39 +161,57 @@
           <blockquote class="reviews__item slider__item">
             <p class="reviews__author-picture">
               <picture>
-                <source media="(min-width: 1200px)" srcset="img/review-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/review-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                <source media="(min-width: 1200px)" srcset="img/review-1-desktop.webp 1x, img/review-1-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/review-1-tablet.webp 1x, img/review-1-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/review-1-mobile.webp 1x, img/review-1-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/review-1-desktop.jpg 1x, img/review-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/review-1-tablet.png 1x, img/review-1-tablet@2x.png 2x">
                 <img class="works-item__image" src="img/review-1-mobile.jpg" srcset="img/review-1-mobile@2x.jpg 2x" alt="Фото Трэвиса Баркера" class="reviews__author-image">
               </picture>
             </p>
-            <cite class="reviews__author-name">Трэвис Баркер</cite>
-            <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+            <div class="reviews__author-wrapper">
+              <cite class="reviews__author-name">Трэвис Баркер</cite>
+              <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+            </div>
           </blockquote>
           <blockquote class="reviews__item  slider__item">
             <p class="reviews__author-picture">
-              <img class="reviews__author-image" src="img/picture-john.jpg" width="50" height="33" alt="Фото Джона Смита">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/review-2-desktop.jpg 1x, img/review-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/review-2-tablet.jpg 1x, img/review-1-tablet@2x.jpg 2x">
+                <img class="works-item__image" src="img/review-2-mobile.jpg" srcset="img/review-2-mobile@2x.jpg 2x" alt="Фото Джона Смита" class="reviews__author-image">
+              </picture>
             </p>
-            <cite class="reviews__author-name">Джон Смит</cite>
-            <p class="reviews__text">Отличную стрижку мне сделали ребята.</p>
+            <div class="reviews__author-wrapper">
+              <cite class="reviews__author-name">Джон Смит</cite>
+              <p class="reviews__text">Отличную стрижку мне сделали ребята.</p>
+            </div>
           </blockquote>
           <blockquote class="reviews__item  slider__item">
             <p class="reviews__author-picture">
-              <img class="reviews__author-image" src="img/picture-ivan.jpg" width="50" height="33" alt="Фото Ивана Бородайло">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/review-3-desktop.jpg 1x, img/review-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/review-3-tablet.jpg 1x, img/review-1-tablet@2x.jpg 2x">
+                <img class="works-item__image" src="img/review-3-mobile.jpg" srcset="img/review-3-mobile@2x.jpg 2x" alt="Фото Ивана Бородайло" class="reviews__author-image">
+              </picture>
             </p>
-            <cite class="reviews__author-name">Иван Бородайло</cite>
-            <p class="reviews__text">В Бородинском ваша борода в надёжных руках!</p>
+            <div class="reviews__author-wrapper">
+              <cite class="reviews__author-name">Иван Бородайло</cite>
+             <p class="reviews__text">В Бородинском ваша борода в надёжных руках!</p>
           </blockquote>
-          <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-          <button class="reviews__next" type="button">Следующий отзыв</button>
+          <button class="reviews__prev button" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
+          <button class="reviews__next button" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
         </div>
         <p class="reviews__toggles slider__toggles">
-          <button class="slider__toggle" type="button">1</button>
-          <button class="slider__toggle" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
+          <button class="slider__toggle" type="button"><span class="visually-hidden">Первый слайд</span></button>
+          <button class="slider__toggle" type="button"><span class="visually-hidden">Второй слайд</span></button></button>
+          <button class="slider__toggle" type="button"><span class="visually-hidden">Третий слайд</span></button>
         </p>
       </div>
     </section>
   </main>
+
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <div class="page-footer__contacts contacts">
@@ -180,7 +219,7 @@
         <p class="contacts__text">
           г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
           <a href="tel:+7777777777" class="contacts__phone">
-            <span class="contacts__phone-mobile">Тел.:</span>+7777777777
+            <span class="contacts__phone-mobile">Тел.:</span> +7 (777) 777-77-77
           </a>
         </p>
       </div>
@@ -188,13 +227,13 @@
         <b class="social__title">Давайте дружить!</b>
         <ul class="social__list">
           <li class="social__item">
-            <a href="https://vk.com" class="social__link social__link--vkontakte">Мы в Вконтакте</a>
+            <a href="#!" class="social__link social__link--vkontakte"><span class="visually-hidden">Мы в Вконтакте</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com">Мы в Фейсбуке</a>
+            <a class="social__link social__link--facebook" href="#!"><span class="visually-hidden">Мы в Фейсбуке</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com">Мы в Инстаграме</a>
+            <a class="social__link social__link--instagram" href="#!"><span class="visually-hidden">Мы в Инстаграме</span></a>
           </li>
         </ul>
       </div>
@@ -206,7 +245,7 @@
   </footer>
 
 
-  <script src="js/main.js"></script>
+  <script src="js/scripts.min.js"></script>
 
 </body>
 </html>
