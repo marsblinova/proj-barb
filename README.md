@@ -1,2 +1,2 @@
 # project-barb
-First project
+First project in progress
